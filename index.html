@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Website Pribadi - Gisel</title>
+  <style>
+    /* === RESET DAN DASAR === */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #0f172a;
+      color: #e2e8f0;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* === NAVBAR === */
+    header {
+      background-color: rgba(15, 23, 42, 0.9);
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+
+    header h1 {
+      color: #38bdf8;
+      font-weight: 700;
+      font-size: 1.5rem;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+
+    nav a {
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #38bdf8;
+    }
+
+    /* === BAGIAN HERO === */
+    section#home {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      background: linear-gradient(135deg, #1e293b, #0f172a);
+      padding: 100px 20px 60px;
+    }
+
+    #home h2 {
+      font-size: 2.5rem;
+      color: #38bdf8;
+    }
+
+    #home p {
+      margin-top: 15px;
+      font-size: 1.2rem;
+      max-width: 600px;
+      color: #cbd5e1;
+    }
+
+    .btn {
+      margin-top: 25px;
+      padding: 12px 25px;
+      background-color: #38bdf8;
+      border: none;
+      border-radius: 8px;
+      color: #0f172a;
+      font-weight: bold;
+      cursor: pointer;
+      transition: transform 0.3s, background 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #0ea5e9;
+      transform: scale(1.05);
+    }
+
+    /* === BAGIAN TENTANG === */
+    section#tentang {
+      padding: 80px 20px;
+      text-align: center;
+      background-color: #1e293b;
+    }
+
+    #tentang h2 {
+      color: #38bdf8;
+      margin-bottom: 20px;
+    }
+
+    #tentang p {
+      max-width: 700px;
+      margin: 0 auto;
+      color: #cbd5e1;
+    }
+
+    /* === BAGIAN KONTAK === */
+    section#kontak {
+      padding: 80px 20px;
+      text-align: center;
+      background-color: #0f172a;
+    }
+
+    #kontak h2 {
+      color: #38bdf8;
+      margin-bottom: 20px;
+    }
+
+    form {
+      max-width: 400px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    input, textarea {
+      padding: 10px;
+      border-radius: 6px;
+      border: none;
+      background-color: #1e293b;
+      color: #fff;
+      font-size: 1rem;
+      outline: none;
+    }
+
+    input:focus, textarea:focus {
+      border: 2px solid #38bdf8;
+    }
+
+    /* === FOOTER === */
+    footer {
+      text-align: center;
+      padding: 25px;
+      background-color: #1e293b;
+      color: #94a3b8;
+      font-size: 0.9rem;
+    }
+
+    /* === RESPONSIF === */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+      }
+      nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      #home h2 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🌸 Gisel Site</h1>
+    <nav>
+      <ul>
+        <li><a href="#home">Beranda</a></li>
+        <li><a href="#tentang">Tentang</a></li>
+        <li><a href="#kontak">Kontak</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section id="home">
+    <h2>Halo, Aku Gisel 👋</h2>
+    <p>Selamat datang di websitenya! Ini adalah contoh website personal modern yang dibuat menggunakan HTML, CSS, dan JavaScript — dan bisa kamu unggah langsung ke GitHub Pages!</p>
+    <button class="btn" onclick="scrollToTentang()">Lebih Lanjut</button>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section id="tentang">
+    <h2>Tentang Aku</h2>
+    <p>
+      Aku suka belajar tentang web development dan membuat proyek-proyek kreatif seperti game, desain UI, dan animasi web.  
+      Website ini dibuat sebagai contoh untuk menampilkan kemampuan dasar HTML, CSS, dan JavaScript dengan tampilan yang menarik dan responsif.
+    </p>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="kontak">
+    <h2>Hubungi Aku</h2>
+    <form id="contactForm">
+      <input type="text" id="name" placeholder="Nama" required />
+      <input type="email" id="email" placeholder="Email" required />
+      <textarea id="message" rows="4" placeholder="Pesan" required></textarea>
+      <button type="submit" class="btn">Kirim</button>
+    </form>
+  </section>
+
+  <footer>
+    © 2025 Gisel | Dibuat dengan 💙 menggunakan HTML, CSS & JavaScript
+  </footer>
+
+  <script>
+    // Scroll halus ke bagian tentang
+    function scrollToTentang() {
+      document.getElementById("tentang").scrollIntoView({ behavior: "smooth" });
+    }
+
+    // Event listener untuk form
+    document.getElementById("contactForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const message = document.getElementById("message").value;
+
+      alert(`Terima kasih, ${name}! Pesan kamu sudah terkirim.\nEmail: ${email}\nPesan: ${message}`);
+      this.reset();
+    });
+  </script>
+</body>
+</html>
